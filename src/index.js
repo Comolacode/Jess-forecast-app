@@ -33,12 +33,11 @@ function formatDate(date) {
 ];
     let day = days[date.getDay()];
 
-    if (minutes < 10) {
-        minutes =`0 ${minutes}`;
+    if  (minutes < 10)  {
+        minutes =`0${minutes}`;
     }
 
-
-    return `${day} ${hours}:${minutes}`
+    return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city){
@@ -53,15 +52,19 @@ function handleSearchSubmit(event){
     
     searchCity(searchInput.value);
 }
+
 function displayForecast(){
     let forcast = document.querySelector("#forecast");
 
-    let days = ["Wed", "Thurs", "Fri" , "Sat", "Sun", "Mon", "Tues"];
+    let days = ["Wed", "Thurs", "Fri" , "Sat", "Sun"];
+    let forecastHTML = "";
 
-    days.forEach(function (day){
-    forecast.innerHTML = `
+    days.forEach(function (day) {
+        forecastHTML = 
+            forecastHTML +
+         `
         <div class = "weather-forecast-day">
-            <div class = "weather-forecast-date">Wed</div>
+            <div class = "weather-forecast-date">${day}</div>
             <div class = "weather-forecast-icon">🌤️</div>
             <div class = "weather-forecast-temperatures">
                 <div class = "weather-forecast-temperature">
@@ -72,9 +75,11 @@ function displayForecast(){
         </div>
      `;
     });
+
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHTML;
 }
 
-    
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener ("submit", handleSearchSubmit);
 
