@@ -53,9 +53,32 @@ function handleSearchSubmit(event){
     
     searchCity(searchInput.value);
 }
+function displayForecast(){
+    let forcast = document.querySelector("#forecast");
 
+    let days = ["Wed", "Thurs", "Fri" , "Sat", "Sun", "Mon", "Tues"];
 
+    days.forEach(function (day){
+    forecast.innerHTML = `
+        <div class = "weather-forecast-day">
+            <div class = "weather-forecast-date">Wed</div>
+            <div class = "weather-forecast-icon">🌤️</div>
+            <div class = "weather-forecast-temperatures">
+                <div class = "weather-forecast-temperature">
+                    <strong>74°</strong>
+                </div>
+                <div class = "weather-forecast-temperature">33°</div>
+            </div>
+        </div>
+     `;
+    });
+}
+
+    
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener ("submit", handleSearchSubmit);
 
 searchCity("Chicago");
+displayForecast();
+
+
