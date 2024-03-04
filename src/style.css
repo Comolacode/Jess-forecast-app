@@ -1,16 +1,16 @@
 body {
-    background-color: #7C311E;
+    background-color: #D0DEC7;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 a {
-    color: #4A2222;
+    color:#D0DEC7;
 }
 
 .weather-app {
-    background: #F2C574;
+    background: #F6F0E8;
     max-width: 600px;
     margin: 30px auto;
     padding: 30px;
@@ -25,7 +25,7 @@ header {
 }
 
 .search-form-input {
-    background-color: #7C311E;
+    background-color: #D0DEC7;
     border: none;
     border-radius: 10px;
     width: 70%;
@@ -34,13 +34,13 @@ header {
 }
 
 .search-form-button {
-    background: #7C311E;
+    background: #D0DEC7;
     padding: 15px 20px;
     border: none;
     font-size: 15px;
     margin-left: 5px;
     border-radius: 7px;
-    color: gold;
+    color: 6F0E8;
     cursor: pointer;
 }
 
